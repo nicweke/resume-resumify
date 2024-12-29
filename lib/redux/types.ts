@@ -33,7 +33,7 @@ export interface FeaturedSkill {
   rating: number;
 }
 
-export interface ResumeSkill {
+export interface ResumeSkills {
   featuredSkills: FeaturedSkill[];
   descriptions: string[];
 }
@@ -47,7 +47,7 @@ export interface Resume {
   workExperiences: ResumeWorkExperience[];
   educations: ResumeEducation[];
   projects: ResumeProject[];
-  skills: ResumeSkill;
+  skills: ResumeSkills;
   custom: ResumeCustom;
 }
 
