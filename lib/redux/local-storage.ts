@@ -19,4 +19,4 @@ export const loadStateFromLocalStorage = () => {
 };
 
 
-export const getHasUsedAppBefore  = () => Boolean(loadStateFromLocalStorage());
+export const getHasUsedAppBefore = () => Boolean(loadStateFromLocalStorage());

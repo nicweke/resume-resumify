@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import { cx } from "../../lib/cx";
 import Link from "next/link";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
 export const TopNavBar = () => {
   const pathname = usePathname();
@@ -13,7 +14,7 @@ export const TopNavBar = () => {
     <header
       aria-label="Site header"
       className={cx(
-        "flex h-[var-(--top-nav-bar-height)] items-center border-b-2 border-gray-100 px-3 lg:px-12",
+        "flex h-[var-(--top-nav-bar-height)] items-center  px-3 lg:px-12",
         isHomePage && "bg-dot"
       )}
     >
@@ -32,10 +33,12 @@ export const TopNavBar = () => {
           {[
           ["/resume-builder", "Builder"],
           ["/resume-parser", "Parser"]].map(([href, text])=> (
-            <Link href={href} key={href} className="rounded-md px-1.5 py-2 text-gray-500 hover:bg-gray-100 focus-visible:bg-gray-100 lg:px-4">
+            <Button variant="link">
+            <Link href={href} key={href} className="rounded-md px-1.5 py-2 text-gray-900 hover:bg-gray-100 focus-visible:bg-gray-100 lg:px-4">
               {text}
 
             </Link>
+            </Button>
           ))
           }
           </nav>
